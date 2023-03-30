@@ -1,6 +1,6 @@
 import styles from '@component/styles/events/Events.module.css';
 
-const AboutUs = () => {
+const EventsPage = () => {
   return (
     <>
       <header className={ styles.header }>
@@ -24,4 +24,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs;
+export default EventsPage;

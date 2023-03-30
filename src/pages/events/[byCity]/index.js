@@ -1,6 +1,6 @@
 import styles from '@component/styles/events/EventsByCity.module.css';
 
-const EventsByCity = () => {
+const EventsByCityPage = () => {
   return (
     <>
       <header className={ styles.header }>
@@ -14,10 +14,8 @@ const EventsByCity = () => {
           <a href="/events/london/event4">Event 4</a>
         </ul>
       </main>
-      
-    
     </>
   )
 }
 
-export default EventsByCity;
+export default EventsByCityPage;

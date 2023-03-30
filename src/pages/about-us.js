@@ -1,6 +1,6 @@
 import styles from '@component/styles/AboutUs.module.css'
 
-const AboutUs = () => {
+const AboutUsPage = () => {
   return (
     <>
       <header className={ styles.header }>
@@ -18,4 +18,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs;
+export default AboutUsPage;

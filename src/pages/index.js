@@ -1,10 +1,7 @@
-import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import styles from '@component/styles/Home.module.css'
+import Head from 'next/head';
+import styles from '@component/styles/Home.module.css';
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+export default function Home({ data }) {
   const date = new Date().getFullYear();
   return (
     <>
@@ -18,7 +15,6 @@ export default function Home() {
       <header className={ styles.header }>
         <nav>
           <img src="" alt="" />
-          {/* <a href="/">Home</a> */}
           <a href="/events">Events</a>
           <a href="/about-us">About us</a>
         </nav>
@@ -27,27 +23,45 @@ export default function Home() {
         <h1>
           Welcome!
         </h1>
-        <span>Browse to find events</span>
-        <a href='/events/london'>
-          <h2>Events in London</h2>
-          <img src="" alt="" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, porro! Laboriosam repellendus nesciunt sed quas vitae. Maxime dolore pariatur voluptatum nihil, voluptatem natus labore reprehenderit nam eius distinctio? Tempore, non?</p>
-        </a>
-        <a href='/events/sanfrancisco'>
-          <h2>Events in San Francisco</h2>
-          <img src="" alt="" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, porro! Laboriosam repellendus nesciunt sed quas vitae. Maxime dolore pariatur voluptatum nihil, voluptatem natus labore reprehenderit nam eius distinctio? Tempore, non?</p>
-        </a>
-        <a href='/events/barcelona'>
-          <h2>Events in Barcelona</h2>
-          <img src="" alt="" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, porro! Laboriosam repellendus nesciunt sed quas vitae. Maxime dolore pariatur voluptatum nihil, voluptatem natus labore reprehenderit nam eius distinctio? Tempore, non?</p>
-        </a>
+        <span>Browse to find events...</span>
+        {
+          data.map(category => (
+            <a href={`/events/${ category.id }`}>
+              <h2>{ category.title }</h2>
+              <img src={ category.image } alt={ category.title } />
+              <p>
+                { category.description }
+              </p>
+            </a>
+          ))
+        }
       </main>
-
       <footer className={ styles.footer }>
         <p> {date} | Desenvolvido por Leonardo Diman</p>
       </footer>
     </>
   )
 }
+
+export async function getServerSideProps() {
+  // const { events_by_city } = await import('../data/data.json');
+  const data = await import('../data/data.json');
+
+  console.log(data.events_by_city);
+  
+  return {
+    props: {
+      data: data.events_by_city
+    }
+  }
+  
+}
+
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       title: 'Welcome!',
+//       subtitle: 'Browse to find events'
+//     }
+//   }
+// }
