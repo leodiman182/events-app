@@ -63,7 +63,7 @@
 }
 
 .main a h2 {
-  padding: 10px 5px;
+  padding: 10px 25px;
   font-weight: bold;
   border-bottom: 2px solid black;
 }
@@ -122,10 +122,6 @@
     font-weight: 300;
     font-size: 14px;
     padding-top: 2px;
-  }
-
-  .main a h2 {
-    padding: 15px 20px 5px;
   }
 
   .main a img {

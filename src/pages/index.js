@@ -44,14 +44,11 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps() {
-  // const { events_by_city } = await import('../data/data.json');
-  const data = await import('../data/data.json');
-
-  console.log(data.events_by_city);
+  const { events_by_city } = await import('../data/data.json');
   
   return {
     props: {
-      data: data.events_by_city
+      data: events_by_city
     }
   }
   
