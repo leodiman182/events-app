@@ -16,7 +16,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family:  var(--font-mono);
-  background-color: rgb(255, 237, 214);
+  background-color: rgb(250, 239, 224);
 }
 
 a {
