@@ -18,7 +18,7 @@ export default function Home() {
       <header className={ styles.header }>
         <nav>
           <img src="" alt="" />
-          <a href="/">Home</a>
+          {/* <a href="/">Home</a> */}
           <a href="/events">Events</a>
           <a href="/about-us">About us</a>
         </nav>

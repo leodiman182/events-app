@@ -1,21 +1,30 @@
 .header {
-  font-size: 18px;
   padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 2px black solid;
+  background-color: black;
 }
 
 .header h2 {
-  color: aqua;
-  border-bottom: 4px aqua solid;
-  padding: 10px 25px;
+  color: white;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  /* min-height: 100vh; */
+  padding: 50px 10px;
+  align-items: flex-start;
+}
+
+.main a:hover h2 {
+  background-color: black;
+  color: aqua;
+}
+
+.main a h2 {
+  padding: 10px 5px;
+  font-size: 20px;
 }
 
 .footer {
@@ -32,8 +41,11 @@
 
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 700px) and (max-width: 1119px) {
-  
+@media (min-width: 700px) {
+  .main {
+    /* min-height: 100vh; */
+    align-items: center;
+  }
 }
 
 /* Larger Desktop */
