@@ -1,5 +1,6 @@
 import styles from '@component/styles/events/EventsByCity.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const EventsByCityPage = ({ filteredEvents, title }) => {
 
@@ -12,10 +13,10 @@ const EventsByCityPage = ({ filteredEvents, title }) => {
         <ul>
           {
             filteredEvents.map(ev => (
-              <a key={ ev.id } href={`/events/${ev.city}/${ev.id}`}>
+              <Link key={ ev.id } href={`/events/${ev.city}/${ev.id}`}>
                 <Image width={999} height={999} src={ ev.image } alt={ ev.title } />
-                <h2>{ ev.title }</h2>
-              </a>
+                <h2>{ ev.title }</h2>              
+              </Link>
             ))
           }
         </ul>
@@ -48,12 +49,16 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const { allEvents, events_by_city } = await import('../../../data/data.json');
 
+  console.log(allEvents);
+
+  const id = context?.params.byCity
+
   const cityTitle = events_by_city
-    .filter(ev => ev.id === context.params.byCity)
+    .filter(ev => ev.id === id)
     .map(ev => ev.title);
 
   const eventsPerCity = allEvents
-    .filter(ev => ev.city === context.params.byCity)
+    .filter(ev => ev.city === id)
     .map(ev => ev);
 
   return {

@@ -10,10 +10,10 @@ const EventsPage = ({ data }) => {
       <main className={ styles.main }>
         {
           data.map(ev => (
-            <a key={ ev.id } href={`/events/${ ev.id }`}>
+            <Link key={ ev.id } href={`/events/${ ev.id }`}>
               <h2>{ ev.title }</h2>
               <Image width={999} height={999} src={ ev.image } alt={ ev.title } />
-            </a>
+            </Link>
           ))
         }
       </main>

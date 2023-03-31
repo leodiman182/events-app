@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '@component/styles/Home.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home({ data }) {
   const date = new Date().getFullYear();
@@ -14,10 +15,13 @@ export default function Home({ data }) {
       </Head>
 
       <header className={ styles.header }>
-        <nav>
-          <img src="" alt="" />
-          <a href="/events">Events</a>
-          <a href="/about-us">About us</a>
+        <nav>          
+          <Link href="/events">
+            Events        
+          </Link>
+          <Link href="/about-us">
+            About us         
+          </Link>
         </nav>
       </header>
       <main className={ styles.main }>
@@ -27,7 +31,7 @@ export default function Home({ data }) {
         <span>Browse to find events...</span>
         {
           data.map(category => (
-            <a
+            <Link
               key={ category.id }
               href={`/events/${ category.id }`}
             >
@@ -36,7 +40,7 @@ export default function Home({ data }) {
               <p>
                 { category.description }
               </p>
-            </a>
+            </Link>
           ))
         }
       </main>
