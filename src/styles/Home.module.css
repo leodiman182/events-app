@@ -22,7 +22,7 @@
 .header nav a:hover {
   background-color: aqua;
   color: black;
-  transition-duration: 100ms;
+  transition-duration: 150ms;
 }
 
 .main {
@@ -57,7 +57,7 @@
 }
 
 .main a:hover {
-  transition-duration: 100ms;
+  transition-duration: 150ms;
   background-color: white;
   border-radius: 0 0 5px 5px;
 }
@@ -72,13 +72,15 @@
   color: aqua;
   background-color: black;
   border-bottom: 2px solid aqua;
-  transition-duration: 100ms;
+  transition-duration: 150ms;
   border-radius: 5px 5px 0 0;
 }
 
 .main a img {
   max-width: 400px;
   max-height: 300px;
+  object-fit: cover;
+
   margin: 30px auto 0;
 
   border-radius: 5px;
@@ -122,10 +124,11 @@
     font-weight: 300;
     font-size: 14px;
     padding-top: 2px;
+    margin: 0 0 40px;
   }
 
   .main a img {
-    margin: 50px auto 0;
+    margin: 30px auto 0;
   }
 
   .main a p {

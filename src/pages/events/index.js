@@ -1,27 +1,35 @@
 import styles from '@component/styles/events/Events.module.css';
+import Image from 'next/image';
 
-const EventsPage = () => {
+const EventsPage = ({ data }) => {
   return (
     <>
       <header className={ styles.header }>
         <h2>Events</h2>
       </header>
       <main className={ styles.main }>
-        <a href='/events/london'>
-          <img src="" alt="" />
-          <h2>Events in London</h2>
-        </a>
-        <a href='/events/sanfrancisco'>
-          <img src="" alt="" />
-          <h2>Events in San Francisco</h2>
-        </a>
-        <a href='/events/barcelona'>
-          <img src="" alt="" />
-          <h2>Events in Barcelona</h2>
-        </a>
+        {
+          data.map(ev => (
+            <a href={`/events/${ ev.id }`}>
+              <h2>{ ev.title }</h2>
+              <Image width={999} height={999} src={ ev.image } alt={ ev.title } />
+            </a>
+          ))
+        }
       </main>
     </>
   )
 }
 
 export default EventsPage;
+
+
+export async function getStaticProps() {
+  const { events_by_city } = await import('../../data/data.json');
+  
+  return {
+    props: {
+      data: events_by_city
+    },
+  }  
+}

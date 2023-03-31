@@ -14,17 +14,59 @@
   display: flex;
   flex-direction: column;
   padding: 50px 10px;
-  align-items: flex-start;
+  align-items: center;
+  max-width: 1024px;
 }
 
-.main a:hover h2 {
-  background-color: black;
-  color: aqua;
+.main a {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.main a:hover {
+  transition-duration: 150ms;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
 }
 
 .main a h2 {
-  padding: 10px 5px;
-  font-size: 20px;
+  padding: 10px 25px;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 2px solid black;
+}
+
+.main a:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transition-duration: 150ms;
+}
+
+.main a:hover h2 {
+  color: aqua;
+  background-color: black;
+  border-bottom: 2px solid aqua;
+  transition-duration: 150ms;
+  border-radius: 5px 5px 0 0;
+}
+
+.main a img {
+  max-width: 300px;
+  max-height: 200px;
+  object-fit: cover;
+
+  margin: 0 auto;
+
+  border-radius: 0 0 5px 5px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.main a:hover img {
+  border-color: aqua;
+  transition-duration: 150ms;
 }
 
 .footer {
@@ -45,6 +87,10 @@
   .main {
     /* min-height: 100vh; */
     align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    flex-wrap: wrap;
   }
 }
 

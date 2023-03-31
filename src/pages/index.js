@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from '@component/styles/Home.module.css';
+import Image from 'next/image';
 
 export default function Home({ data }) {
   const date = new Date().getFullYear();
@@ -26,9 +27,12 @@ export default function Home({ data }) {
         <span>Browse to find events...</span>
         {
           data.map(category => (
-            <a href={`/events/${ category.id }`}>
+            <a
+              key={ category.id }
+              href={`/events/${ category.id }`}
+            >
               <h2>{ category.title }</h2>
-              <img src={ category.image } alt={ category.title } />
+              <Image width={999} height={999} src={ category.image } alt={ category.title } />
               <p>
                 { category.description }
               </p>

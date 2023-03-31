@@ -31,7 +31,7 @@
 .main ul a:hover {
   color: aqua;
   background-color: black;
-  transition-duration: 100ms;
+  transition-duration: 150ms;
 }
 
 .footer {
