@@ -57,12 +57,3 @@ export async function getServerSideProps() {
   }
   
 }
-
-// export async function getStaticProps() {
-//   return {
-//     props: {
-//       title: 'Welcome!',
-//       subtitle: 'Browse to find events'
-//     }
-//   }
-// }

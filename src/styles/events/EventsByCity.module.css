@@ -14,24 +14,65 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 20px;
+  padding: 40px 20px;
 }
 
 .main ul {
   display: flex;
   flex-direction: column;
+  max-width: 300px;
 }
 
 .main ul a {
-  padding: 10px 5px;
-  font-size: 28px;
-  margin: 10px auto;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main ul a:hover {
+  transition-duration: 150ms;
+  border-radius: 0 0 5px 5px;
+}
+
+.main ul a h2 {
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+
+.main ul a:hover {
+  transition-duration: 150ms;
+}
+
+.main ul a:hover h2 {
   color: aqua;
   background-color: black;
   transition-duration: 150ms;
+  border-radius: 5px;
+
+  text-shadow:
+    0 0 7px aqua,
+    0 0 10px aqua,
+    0 0 21px aqua,
+    0 0 151px aqua;
+}
+
+.main ul a img {
+  max-width: 250px;
+  max-height: 150px;
+  object-fit: cover;
+
+  margin: 5px auto;
+
+  border: 2px solid transparent;
+}
+
+.main ul a:hover img {
+  border-color: aqua;
+  transition-duration: 150ms;
+  border-radius: 5px;
 }
 
 .footer {
@@ -50,11 +91,23 @@
 /* Tablet and Smaller Desktop */
 @media (min-width: 700px) {
   .main {
-    padding: 50px 0;
+    /* min-height: 100vh; */
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .main ul {
+    display: flex;
+    flex-direction: row;
+    max-width: 768px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   .main ul a {
     font-size: 20px;
+    max-width: 275px;
   }
 }
 
