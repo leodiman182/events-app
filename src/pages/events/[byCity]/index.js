@@ -34,7 +34,7 @@ export async function getStaticPaths() {
   const allPaths = events_by_city.map(ev => {
     return {
       params: {
-        byCity: ev.id.toString(),
+        byCity: ev.id,
       }
     }
   })
