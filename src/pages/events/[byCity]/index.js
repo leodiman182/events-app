@@ -1,6 +1,7 @@
 import styles from '@component/styles/events/EventsByCity.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { BsArrowLeftShort } from "react-icons/bs";
 
 const EventsByCityPage = ({ filteredEvents, title }) => {
 
@@ -10,6 +11,12 @@ const EventsByCityPage = ({ filteredEvents, title }) => {
         <h2>{ title }</h2>
       </header>
       <main className={ styles.main }>
+        <Link href='/'>
+          <BsArrowLeftShort size={'2em'}/>
+          <span>
+            Home
+          </span>
+        </Link>
         <ul>
           {
             filteredEvents.map(ev => (

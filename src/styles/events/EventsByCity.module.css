@@ -17,6 +17,46 @@
   padding: 40px 20px;
 }
 
+.main > a {
+  display: flex;
+  align-items: center;
+  display: flex;
+  margin: 10px auto;
+  padding: 5px 15px 5px 5px;
+
+  border-radius: 5px;
+}
+
+.main > a span {
+  margin-left: 6px;
+}
+
+.main > a:hover {
+  transition-duration: 150ms;
+  fill: aqua;
+  background-color: black;
+}
+
+.main > a:hover svg {
+  transition-duration: 150ms;
+  fill: aqua;
+  filter: 
+  drop-shadow(0px 0px 7px aqua)
+  drop-shadow(0 0 10px aqua)
+  drop-shadow(0 0 21px aqua)
+  drop-shadow(0 0 151px aqua)
+}
+
+.main > a:hover span {
+  transition-duration: 150ms;
+  color: aqua;
+  text-shadow:
+    0 0 7px aqua,
+    0 0 10px aqua,
+    0 0 21px aqua,
+    0 0 151px aqua;
+}
+
 .main ul {
   display: flex;
   flex-direction: column;

@@ -13,36 +13,75 @@
 .main {
   display: flex;
   flex-direction: column;
-  padding: 50px 10px;
+  padding: 20px 10px;
   align-items: center;
   max-width: 1024px;
 }
 
-.main a {
+.main > a {
+  display: flex;
+  align-items: center;
+  display: flex;
+  margin: 10px auto;
+  padding: 5px 15px 5px 5px;
+  border-radius: 5px;
+}
+
+.main > a span {
+  margin-left: 6px;
+}
+
+.main > a:hover {
+  transition-duration: 150ms;
+  fill: aqua;
+  background-color: black;
+}
+
+.main > a:hover svg {
+  transition-duration: 150ms;
+  fill: aqua;
+  filter: 
+  drop-shadow(0px 0px 7px aqua)
+  drop-shadow(0 0 10px aqua)
+  drop-shadow(0 0 21px aqua)
+  drop-shadow(0 0 151px aqua)
+}
+
+.main > a:hover span {
+  transition-duration: 150ms;
+  color: aqua;
+  text-shadow:
+    0 0 7px aqua,
+    0 0 10px aqua,
+    0 0 21px aqua,
+    0 0 151px aqua;
+}
+
+.main section a {
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
 
-.main a:hover {
+.main section a:hover {
   transition-duration: 150ms;
   background-color: white;
   border-radius: 0 0 5px 5px;
 }
 
-.main a h2 {
+.main section a h2 {
   padding: 10px 15px;
   font-weight: bold;
   font-size: 18px;
 }
 
-.main a:hover {
+.main section a:hover {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   transition-duration: 150ms;
 }
 
-.main a:hover h2 {
+.main section a:hover h2 {
   color: aqua;
   background-color: black;
   transition-duration: 150ms;
@@ -54,7 +93,7 @@
     0 0 151px aqua;
 }
 
-.main a img {
+.main section a img {
   max-width: 300px;
   max-height: 200px;
   object-fit: cover;
@@ -65,7 +104,7 @@
   border: 2px solid transparent;
 }
 
-.main a:hover img {
+.main section a:hover img {
   border-color: aqua;
   transition-duration: 150ms;
 }
@@ -85,13 +124,20 @@
 /* Tablet and Smaller Desktop */
 @media (min-width: 700px) {
   .main {
-    /* min-height: 100vh; */
-    align-items: center;
+    margin: 0 auto;
+  }
+
+  .main section {
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 0 auto;
     flex-wrap: wrap;
   }
+
+  .main section a {
+    margin: 15px;
+  }
+  
 }
 
 /* Larger Desktop */
