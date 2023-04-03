@@ -15,8 +15,6 @@
   flex-direction: column;
   padding: 20px 10px;
   align-items: center;
-  max-width: 768px;
-  margin: 0 auto 60px;
 }
 
 .main > a {

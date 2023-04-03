@@ -16,7 +16,6 @@
   flex-direction: column;
   align-items: center;
   padding: 50px 20px;
-  margin: 0 auto 60px;
 }
 
 .main > a {
@@ -80,7 +79,6 @@
 /* Tablet and Smaller Desktop */
 @media (min-width: 700px) {
   .main {
-    max-width: 768px;
     margin: 0 auto;
   }
   

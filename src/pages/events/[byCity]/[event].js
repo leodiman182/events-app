@@ -6,13 +6,13 @@ import { BsArrowLeftShort } from "react-icons/bs";
 const EventPage = ({ event, goBackUrl }) => {
   const { city, description, image, title, emails_registered } = event;
 
+  // CRIAR COMPONENTE INNER HEADER
   return (
     <>
       <header className={ styles.header }>
         <h2>{ title }</h2>
       </header>
       <main className={ styles.main }>
-        <h2>{ title }</h2>
         <Image width={999} height={999} src={ image } alt={ title } />
         <p>{ description }</p>
         <Link href={`/events/${city}`}>
