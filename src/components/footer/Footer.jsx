@@ -1,4 +1,4 @@
-import styles from '@component/styles/footer.module.css';
+import styles from '@component/styles/components/footer.module.css';
 
 export const Footer = () => {
   const date = new Date().getFullYear();

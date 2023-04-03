@@ -1,4 +1,4 @@
-import styles from '@component/styles/header.module.css';
+import styles from '@component/styles/components/header.module.css';
 import Link from 'next/link';
 
 export const Header = () => {
