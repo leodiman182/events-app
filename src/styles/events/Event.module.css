@@ -1,21 +1,85 @@
 .header {
-  font-size: 18px;
   padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 2px black solid;
+  background-color: black;
 }
 
 .header h2 {
-  color: aqua;
-  border-bottom: 4px aqua solid;
-  padding: 10px 25px;
+  color: white;
 }
+
 
 .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-end;
+  padding: 40px 30px;
+}
+
+.main h2 {
+  margin: 20px auto 0;
+  font-size: 28px;
+}
+
+.main img {
+  max-width: 100%;
+  height: auto;
+  margin: 30px auto;
+}
+
+.main p {
+  margin: 10px auto;
+  text-align: center;
+  padding: 0 30px;
+  font-size: 20px;
+}
+
+.main p {
+  margin: auto;
+  text-align: center;
+  padding: 0 30px;
+  font-size: 20px;
+}
+
+.main a {
+  display: inline-block;
   align-items: center;
-  padding: 50px;
-  /* min-height: 100vh; */
+  display: flex;
+  margin: 30px 0;
+  padding: 5px 15px 5px 5px;
+  border-radius: 5px;
+}
+
+.main a span {
+  margin-left: 6px;
+}
+
+.main a:hover {
+  transition-duration: 150ms;
+  fill: aqua;
+  background-color: black;
+}
+.main a:hover svg {
+  transition-duration: 150ms;
+  fill: aqua;
+  filter: 
+  drop-shadow(0px 0px 7px aqua)
+  drop-shadow(0 0 10px aqua)
+  drop-shadow(0 0 21px aqua)
+  drop-shadow(0 0 151px aqua)
+}
+.main a:hover span {
+  transition-duration: 150ms;
+  color: aqua;
+  text-shadow:
+    0 0 7px aqua,
+    0 0 10px aqua,
+    0 0 21px aqua,
+    0 0 151px aqua;
+  
 }
 
 .footer {
@@ -32,8 +96,18 @@
 
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 700px) and (max-width: 1119px) {
-  
+@media (min-width: 700px) {
+  .main {
+    max-width: 768px;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .main img {
+    max-width: 500px;
+  }
 }
 
 /* Larger Desktop */

@@ -1,7 +1,10 @@
-import styles from '@component/styles/AboutUs.module.css';
+import styles from '@component/styles/events/Event.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import { BsArrowLeftShort } from "react-icons/bs";
 
-const EventPage = ({ event }) => {
-  const { city, description, id, image, title, emails_registered } = event;
+const EventPage = ({ event, goBackUrl }) => {
+  const { city, description, image, title, emails_registered } = event;
 
   return (
     <>
@@ -9,9 +12,15 @@ const EventPage = ({ event }) => {
         <h2>{ title }</h2>
       </header>
       <main className={ styles.main }>
-        <img src={image} alt={title} />
         <h2>{ title }</h2>
+        <Image width={999} height={999} src={ image } alt={ title } />
         <p>{ description }</p>
+        <Link href={`/events/${city}`}>
+          <BsArrowLeftShort size={'2em'}/>
+          <span>
+            { goBackUrl }
+          </span>
+        </Link>
       </main>
     </>
   )
@@ -40,14 +49,18 @@ export async function getStaticPaths() {
 
 // PASSANDO COMO PROPS DATA FILTRADA ATRAVÉS DO CONTEXT, QUE POSSUI O PARAMETRO O PATH DA URL
 export async function getStaticProps(context) {
-  const { allEvents } = await import('../../../data/data.json');
+  const { allEvents, events_by_city } = await import('../../../data/data.json');
   const eventId = context.params.event;
+  const eventCity = context.params.byCity;
+
+  const selectedCity = events_by_city.find(city => city.id === eventCity).title;
 
   const event = allEvents.find(ev => ev.id === eventId);
   
   return {
     props: {
-      event
+      event,
+      goBackUrl: selectedCity
     }
   }
 }
