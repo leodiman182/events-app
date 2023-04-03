@@ -15,7 +15,7 @@
   flex-direction: column;
   padding: 20px 10px;
   align-items: center;
-  max-width: 1024px;
+  max-width: 768px;
 }
 
 .main > a {
