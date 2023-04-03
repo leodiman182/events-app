@@ -2,8 +2,6 @@ import Head from 'next/head';
 import styles from '@component/styles/home.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import {Header} from '@component/components/header/Header';
-import {Footer} from '@component/components/footer/Footer';
 
 export default function Home({ data }) {
   return (

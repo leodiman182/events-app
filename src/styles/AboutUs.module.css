@@ -77,7 +77,6 @@
   text-align: right;
 }
 
-
 /* Tablet and Smaller Desktop */
 @media (min-width: 700px) {
   .main {
@@ -93,19 +92,6 @@
 }
 
 /* Larger Desktop */
-@media (min-width: 1120px) {
+/* @media (min-width: 1120px) {
   
-}
-
-@media (prefers-color-scheme: dark) {
-
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
+} */
