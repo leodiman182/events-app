@@ -1,0 +1,27 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding: 10px 40px;
+  font-size: 12px;
+  width: 100vw;
+  
+  background-color: black;
+}
+
+.footer p {
+  text-align: center;
+  color: white;
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 700px) {
+  .footer {
+    padding: 15px 40px;
+    font-size: 14px;
+    background-color: black;
+  }
+    
+  .footer p {
+    text-align: right;
+  }
+}

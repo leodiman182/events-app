@@ -10,12 +10,6 @@ const EventsPage = ({ data }) => {
         <h2>Events</h2>
       </header>
       <main className={ styles.main }>
-        <Link href='/'>
-          <BsArrowLeftShort size={'2em'}/>
-          <span>
-            Home
-          </span>
-        </Link>
         <section>
           {
             data.map(ev => (
@@ -26,6 +20,12 @@ const EventsPage = ({ data }) => {
             ))
           }
         </section>
+        <Link href='/'>
+          <BsArrowLeftShort size={'2em'}/>
+          <span>
+            Home
+          </span>
+        </Link>
       </main>
     </>
   )

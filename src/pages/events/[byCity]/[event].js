@@ -46,7 +46,6 @@ export async function getStaticPaths() {
   }
 }
 
-
 // PASSANDO COMO PROPS DATA FILTRADA ATRAVÉS DO CONTEXT, QUE POSSUI O PARAMETRO O PATH DA URL
 export async function getStaticProps(context) {
   const { allEvents, events_by_city } = await import('../../../data/data.json');

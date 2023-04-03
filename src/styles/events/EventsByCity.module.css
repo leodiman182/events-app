@@ -16,6 +16,7 @@
   padding: 20px 10px;
   align-items: center;
   max-width: 768px;
+  margin: 0 auto 60px;
 }
 
 .main > a {
@@ -127,7 +128,6 @@
   .main {
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
   }
   
   .main section {

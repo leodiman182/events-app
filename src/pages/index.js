@@ -1,10 +1,11 @@
 import Head from 'next/head';
-import styles from '@component/styles/Home.module.css';
+import styles from '@component/styles/home.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import {Header} from '@component/components/header/Header';
+import {Footer} from '@component/components/footer/Footer';
 
 export default function Home({ data }) {
-  const date = new Date().getFullYear();
   return (
     <>
       <Head>
@@ -13,22 +14,13 @@ export default function Home({ data }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <header className={ styles.header }>
-        <nav>          
-          <Link href="/events">
-            Events        
-          </Link>
-          <Link href="/about-us">
-            About us         
-          </Link>
-        </nav>
+        <h2>
+          Welcome!
+        </h2>
+        <span>Browse to find events...</span>
       </header>
       <main className={ styles.main }>
-        <h1>
-          Welcome!
-        </h1>
-        <span>Browse to find events...</span>
         {
           data.map(category => (
             <Link
@@ -44,9 +36,6 @@ export default function Home({ data }) {
           ))
         }
       </main>
-      <footer className={ styles.footer }>
-        <p> {date} | Desenvolvido por Leonardo Diman</p>
-      </footer>
     </>
   )
 }

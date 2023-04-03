@@ -11,12 +11,6 @@ const EventsByCityPage = ({ filteredEvents, title }) => {
         <h2>{ title }</h2>
       </header>
       <main className={ styles.main }>
-        <Link href='/events'>
-          <BsArrowLeftShort size={'2em'}/>
-          <span>
-            Events
-          </span>
-        </Link>
         <section>
           {
             filteredEvents.map(ev => (
@@ -27,6 +21,12 @@ const EventsByCityPage = ({ filteredEvents, title }) => {
             ))
           }
         </section>
+        <Link href='/events'>
+          <BsArrowLeftShort size={'2em'}/>
+          <span>
+            Events
+          </span>
+        </Link>
       </main>
     </>
   )
