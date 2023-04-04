@@ -1,3 +1,4 @@
+import InnerHeader from '@component/components/innerHeader/InnerHeader';
 import styles from '@component/styles/events/Event.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,9 +10,10 @@ const EventPage = ({ event, goBackUrl }) => {
   // CRIAR COMPONENTE INNER HEADER
   return (
     <>
-      <header className={ styles.header }>
+      <InnerHeader className={ styles.header }  title={ title } />
+      {/* <header className={ styles.header }>
         <h2>{ title }</h2>
-      </header>
+      </header> */}
       <main className={ styles.main }>
         <Image width={999} height={999} src={ image } alt={ title } />
         <p>{ description }</p>

@@ -5,12 +5,12 @@ import Link from 'next/link';
 export default function Home({ data }) {
   return (
     <>
-      <header className={ styles.header }>
+      <div className={ styles.header }>
         <h2>
           Welcome!
         </h2>
         <span>Browse to find events...</span>
-      </header>
+      </div>
       <main className={ styles.main }>
         {
           data.map(category => (

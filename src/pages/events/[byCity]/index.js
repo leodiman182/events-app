@@ -1,3 +1,4 @@
+import InnerHeader from '@component/components/innerHeader/InnerHeader';
 import styles from '@component/styles/events/EventsByCity.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,9 +8,7 @@ const EventsByCityPage = ({ filteredEvents, title }) => {
 
   return (
     <>
-      <header className={ styles.header }>
-        <h2>{ title }</h2>
-      </header>
+      <InnerHeader className={ styles.header } title={ title } />
       <main className={ styles.main }>
         <section>
           {

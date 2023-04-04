@@ -1,3 +1,4 @@
+import InnerHeader from '@component/components/innerHeader/InnerHeader';
 import styles from '@component/styles/events/Events.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,9 +7,7 @@ import { BsArrowLeftShort } from "react-icons/bs";
 const EventsPage = ({ data }) => {
   return (
     <>
-      <header className={ styles.header }>
-        <h2>Events</h2>
-      </header>
+      <InnerHeader className={ styles.header } title="Events" />
       <main className={ styles.main }>
         <section>
           {
