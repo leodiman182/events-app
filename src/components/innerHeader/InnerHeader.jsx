@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '@component/styles/components/innerHeader.module.css';
 
-const InnerHeader = ({ title, className }) => {
+const InnerHeader = ({ title }) => {
   return (
-    <div className={ className }>
+    <div className={ styles.header }>
       <h2>{ title }</h2>
     </div>
   )

@@ -18,15 +18,16 @@
 
 .header h2 {
   color: aqua;
-  font-size: 36px;
+  font-size: 48px;
   text-align: center;
+  font-family: var(--font-title);
 }
 
 .header span {
   color: white;
   text-align: center;
-  font-weight: 300;
-  font-size: 12px;
+  font-weight: 400;
+  font-size: 16px;
   padding-top: 4px;
 }
 
@@ -46,6 +47,8 @@
   padding: 10px 25px;
   font-weight: bold;
   border-bottom: 2px solid black;
+  font-family: var(--font-title);
+
 }
 
 .main a:hover h2 {
@@ -72,9 +75,9 @@
 }
 
 .main a p {
-  font-weight: 300;
+  font-weight: 500;
   line-height: 22px;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px 30px 20px;
 }
 
@@ -102,8 +105,6 @@
   }
 
   .main a p {
-    font-weight: 300;
-    line-height: 24px;
     font-size: 16px;
     padding: 20px 40px;
   }

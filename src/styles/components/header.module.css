@@ -14,7 +14,8 @@
 
 .header nav a {
   padding: 10px;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 400;
   color: white;
 }
 

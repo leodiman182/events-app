@@ -1,29 +1,21 @@
 import styles from '@component/styles/components/header.module.css';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 export const Header = () => {
-  const router = useRouter();
-
   const headerLinks = [
     {
       url: '/',
-      value: 'Home',
+      value: 'HOME',
     },
     {
       url: '/events',
-      value: 'Events',
+      value: 'EVENTS',
     },
     {
       url: '/about-us',
-      value: 'About us',
+      value: 'ABOUT US',
     },
   ];
-
-  useEffect(() => {
-    console.log(router.pathname);
-  }, [router.pathname])
 
   return (
     <header className={ styles.header }>
